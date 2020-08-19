@@ -1,0 +1,120 @@
+:root {
+  --one: #dddddd;
+  --two: #fab7b7;
+  --three: #f5a8a8;
+  --four: #e19999;
+  --five: #f5cbcb;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  overflow-y: hidden;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.up {
+  width: 20%;
+  font-size: 4rem;
+  line-height: 1.5;
+  font-family: 'Balsamiq Sans', cursive;
+  position: absolute;
+  background-color:  var(--two);
+  color: #fff;
+  box-shadow: 0.25rem 0.5rem 1rem var(--one);
+  top: 0;
+  left: 0;
+}
+.down {
+  width: 20%;
+  font-size: 4rem;
+  line-height: 1.5;
+  font-family: 'Balsamiq Sans', cursive;
+  position: absolute;
+  background-color:  var(--two);
+  color: #fff;
+  box-shadow: -0.25rem -0.5rem 1rem var(--one);
+  top: calc(100% - 6rem);
+  left: 80%;
+}
+
+#enter, #page1, #page2, #page3, #page4, #page5, #page6 {
+  transition: top 1s ease;
+  position: absolute;
+  left: 0;
+}
+
+#enter {
+  background-color: var(--five);
+  color: #fff;
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+.bttn-enter {
+  margin: auto;
+  font-size: 8rem;
+  padding: 6% 8%;
+  border: 3px solid var(--four);
+  border-radius: 20%;
+  background-color: #fff;
+  color: var(--three);
+  font-family: 'Balsamiq Sans', cursive;
+  box-shadow: 0.5rem 1.25rem 1rem var(--three);
+  outline: none;
+}
+
+.title-txt {
+  font-size: 12rem;
+  font-family: 'Marck Script', cursive;
+  color: var(--two);
+  margin: 1%;
+}
+.title {
+  font-size: 15rem;
+  font-family: 'Balsamiq Sans', cursive;
+  color: #fff;
+  margin: 2%;
+}
+
+.hb-img {
+  width: 75%;
+  display: inline-block;
+  border-radius: 15%;
+  border: 2px solid var(--two);
+  position: relative;
+  top: -5%;
+}
+
+.heart {
+  width: 80%;
+  display: inline-block;
+  position: relative;
+  top: -8%;
+}
+
+.w-100 {
+  flex: 0 0 100%;
+}
+
+.on-screen {
+  top: 0;
+}
+
+.above {
+  top: -100%;
+}
+
+.below {
+  top: 100%;
+}
