@@ -32,7 +32,6 @@ body {
   position: absolute;
   background-color:  var(--two);
   color: #fff;
-  box-shadow: 0.25rem 0.5rem 1rem var(--one);
   top: 0;
   left: 0;
 }
