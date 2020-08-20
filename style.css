@@ -10,7 +10,8 @@ body {
   margin: 0;
   box-sizing: border-box;
   text-align: center;
-  overflow-y: hidden;
+  overflow: hidden;
+  position: fixed;
 }
 
 .main {
