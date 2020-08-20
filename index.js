@@ -15,5 +15,5 @@ $(".bttn-enter").click(function() {
   }, 5000);
   window.setTimeout(function() {
     clearInterval(playPages);
-  }, 25000);
+  }, 30000);
 });
