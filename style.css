@@ -11,6 +11,7 @@ body {
   box-sizing: border-box;
   text-align: center;
   overflow: hidden;
+  max-height: 100vh;
 }
 
 .main {
@@ -32,6 +33,7 @@ body {
   position: absolute;
   background-color:  var(--two);
   color: #fff;
+  box-shadow: 0.25rem 0.5rem 1rem var(--one);
   top: 0;
   left: 0;
 }
@@ -87,12 +89,16 @@ body {
 }
 
 .hb-img {
-  width: 75%;
+  width: 85%;
   display: inline-block;
   border-radius: 15%;
   border: 2px solid var(--two);
   position: relative;
   top: -5%;
+  max-height: 75vh;
+  max-width: 90vh;
+  object-fit: contain;
+  margin: 0;
 }
 
 .heart {
@@ -100,6 +106,8 @@ body {
   display: inline-block;
   position: relative;
   top: -8%;
+  max-height: 50vh;
+  object-fit: contain;
 }
 
 .w-100 {

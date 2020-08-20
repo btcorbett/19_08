@@ -1,26 +1,19 @@
 const pages = ["enter", "page1", "page2", "page3", "page4", "page5", "page6"];
+var i = 1;
 
 $(document).ready(function() {
   window.scrollTo(0,0);
 });
 
 $(".bttn-enter").click(function() {
-  $("#enter").addClass("above").removeClass("on-screen");
-  $("#page1").removeClass("below").addClass("on-screen");
+  $("#" + pages[i - 1]).addClass("above").removeClass("on-screen");
+  $("#" + pages[i]).addClass("on-screen").removeClass("below");
+  var playPages = window.setInterval(function() {
+    $("#" + pages[i]).addClass("above").removeClass("on-screen");
+    $("#" + pages[i + 1]).addClass("on-screen").removeClass("below");
+    i++;
+  }, 5000);
+  window.setTimeout(function() {
+    clearInterval(playPages);
+  }, 25000);
 });
-
-function goBack(back) {
-  var currPage = back.parentNode.id;
-  var backPage = pages[pages.indexOf(currPage) - 1];
-
-  $("#" + currPage).addClass("below").removeClass("on-screen");
-  $("#" + backPage).addClass("on-screen").removeClass("above");
-}
-
-function goNext(back) {
-  var currPage = back.parentNode.id;
-  var nextPage = pages[pages.indexOf(currPage) + 1];
-
-  $("#" + currPage).addClass("above").removeClass("on-screen");
-  $("#" + nextPage).addClass("on-screen").removeClass("below");
-}
